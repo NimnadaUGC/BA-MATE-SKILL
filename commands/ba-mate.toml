@@ -1,0 +1,5 @@
+description = "Use BA Mate for a scoped BA task, such as clarify, draft, review or change."
+prompt = """
+Use the ba-mate Agent Skill for this Business Analysis request: {{args}}
+Read its SKILL.md and the relevant mode reference before beginning. Follow the skill's human decision boundaries. If the skill is unavailable, explain that limitation rather than claiming it ran. An empty request should show the supported BA modes and ask for the intended task.
+"""

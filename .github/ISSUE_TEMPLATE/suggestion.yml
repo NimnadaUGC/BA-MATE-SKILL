@@ -1,0 +1,25 @@
+name: Suggestion
+description: Suggest a focused improvement linked to BA use.
+title: "[Suggestion] "
+body:
+  - type: markdown
+    attributes:
+      value: "Public feedback is voluntary. Omit company/client/personal details. Preserve human decision authority in proposed changes."
+  - type: input
+    id: version
+    attributes:
+      label: Package version, host/model if relevant, and affected mode
+  - type: textarea
+    id: need
+    attributes:
+      label: BA problem and expected improvement
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Sanitised observation or fictional example
+  - type: textarea
+    id: tradeoffs
+    attributes:
+      label: Proposed change and tradeoffs

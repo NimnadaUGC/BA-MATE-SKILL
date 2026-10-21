@@ -1,0 +1,30 @@
+name: Workflow defect
+description: Report a reproducible BA workflow or integrity failure.
+title: "[Workflow] "
+body:
+  - type: markdown
+    attributes:
+      value: "Public synthetic or sanitised reproductions only. This is not a research participant submission or approval channel."
+  - type: input
+    id: version
+    attributes:
+      label: Package version, host/version and model if exposed
+    validations:
+      required: true
+  - type: input
+    id: mode
+    attributes:
+      label: Affected mode and mechanism M1–M7 if known
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal fictional reproduction
+      description: "Include expected versus observed behaviour and whether helpers were available. Omit company/project identifiers and private record files."
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact and recovery attempted

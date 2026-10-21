@@ -1,0 +1,227 @@
+{
+  "records": [
+    {
+      "id": "S-1",
+      "revision": 1,
+      "type": "scope",
+      "status": "draft",
+      "scope": null,
+      "origin": {
+        "kind": "human",
+        "actor": "Synthetic BA"
+      },
+      "at": "2026-10-13T10:00:00+05:30",
+      "content": {
+        "text": "Fictional craft studio: release unclaimed workshop seats; notifications excluded."
+      },
+      "references": [],
+      "review": null
+    },
+    {
+      "id": "ST-1",
+      "revision": 1,
+      "type": "stakeholder",
+      "status": "draft",
+      "scope": {
+        "id": "S-1",
+        "revision": 1
+      },
+      "origin": {
+        "kind": "human",
+        "actor": "Synthetic BA"
+      },
+      "at": "2026-10-13T10:00:00+05:30",
+      "content": {
+        "text": "Fictional studio coordinator"
+      },
+      "references": [],
+      "review": null
+    },
+    {
+      "id": "AU-1",
+      "revision": 1,
+      "type": "authority",
+      "status": "confirmed",
+      "scope": {
+        "id": "S-1",
+        "revision": 1
+      },
+      "origin": {
+        "kind": "human",
+        "actor": "Synthetic BA"
+      },
+      "at": "2026-10-13T10:00:00+05:30",
+      "content": {
+        "person": "Synthetic Owner",
+        "role": "Studio owner",
+        "basis": "Fictional delegated project authority"
+      },
+      "references": [],
+      "review": {
+        "actor": "Synthetic BA",
+        "at": "2026-10-13T10:00:00+05:30",
+        "basis": "Synthetic human review of this exact revision"
+      }
+    },
+    {
+      "id": "E-1",
+      "revision": 1,
+      "type": "source",
+      "status": "draft",
+      "scope": {
+        "id": "S-1",
+        "revision": 1
+      },
+      "origin": {
+        "kind": "human",
+        "actor": "Synthetic BA"
+      },
+      "at": "2026-10-13T10:00:00+05:30",
+      "content": {
+        "text": "Release unclaimed seats exactly 36 elapsed hours after booking confirmation. Do not release attended bookings.",
+        "provenance": "New fictional studio interview, paragraph 1",
+        "locator": "paragraph 1",
+        "extraction_reviewed": true,
+        "relevant": true,
+        "classification": "public"
+      },
+      "references": [],
+      "review": {
+        "actor": "Synthetic BA",
+        "at": "2026-10-13T10:00:00+05:30",
+        "basis": "Synthetic human review of this exact revision"
+      }
+    },
+    {
+      "id": "R-1",
+      "revision": 1,
+      "type": "requirement",
+      "status": "in-review",
+      "scope": {
+        "id": "S-1",
+        "revision": 1
+      },
+      "origin": {
+        "kind": "human",
+        "actor": "Synthetic BA"
+      },
+      "at": "2026-10-13T10:00:00+05:30",
+      "content": {
+        "text": "At 36 elapsed hours after confirmation, release an unclaimed seat. Attended bookings are excluded."
+      },
+      "references": [
+        {
+          "id": "E-1",
+          "revision": 1
+        }
+      ],
+      "review": {
+        "actor": "Synthetic BA",
+        "at": "2026-10-13T10:00:00+05:30",
+        "basis": "Synthetic human review of this exact revision"
+      }
+    },
+    {
+      "id": "AC-1",
+      "revision": 1,
+      "type": "criterion",
+      "status": "in-review",
+      "scope": {
+        "id": "S-1",
+        "revision": 1
+      },
+      "origin": {
+        "kind": "human",
+        "actor": "Synthetic BA"
+      },
+      "at": "2026-10-13T10:00:00+05:30",
+      "content": {
+        "text": "At 35 hours 59 minutes retain an unclaimed seat; at 36 hours release it. Retain attended bookings."
+      },
+      "references": [
+        {
+          "id": "R-1",
+          "revision": 1
+        }
+      ],
+      "review": {
+        "actor": "Synthetic BA",
+        "at": "2026-10-13T10:00:00+05:30",
+        "basis": "Synthetic human review of this exact revision"
+      }
+    },
+    {
+      "id": "D-1",
+      "revision": 1,
+      "type": "document",
+      "status": "in-review",
+      "scope": {
+        "id": "S-1",
+        "revision": 1
+      },
+      "origin": {
+        "kind": "human",
+        "actor": "Synthetic BA"
+      },
+      "at": "2026-10-13T10:00:00+05:30",
+      "content": {
+        "text": "Studio requirement: 36 elapsed hours, attended bookings excluded."
+      },
+      "references": [
+        {
+          "id": "R-1",
+          "revision": 1
+        },
+        {
+          "id": "AC-1",
+          "revision": 1
+        }
+      ],
+      "review": {
+        "actor": "Synthetic BA",
+        "at": "2026-10-13T10:00:00+05:30",
+        "basis": "Synthetic human review of this exact revision"
+      }
+    }
+  ],
+  "traces": [
+    {
+      "id": "T-1",
+      "revision": 1,
+      "from": {
+        "id": "E-1",
+        "revision": 1
+      },
+      "to": {
+        "id": "R-1",
+        "revision": 1
+      },
+      "relation": "supports",
+      "status": "verified",
+      "verification": {
+        "actor": "Synthetic BA",
+        "at": "2026-10-13T10:00:00+05:30",
+        "basis": "Synthetic human review of this exact revision"
+      }
+    },
+    {
+      "id": "T-2",
+      "revision": 1,
+      "from": {
+        "id": "R-1",
+        "revision": 1
+      },
+      "to": {
+        "id": "AC-1",
+        "revision": 1
+      },
+      "relation": "supports",
+      "status": "verified",
+      "verification": {
+        "actor": "Synthetic BA",
+        "at": "2026-10-13T10:00:00+05:30",
+        "basis": "Synthetic human review of this exact revision"
+      }
+    }
+  ]
+}

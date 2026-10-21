@@ -1,0 +1,36 @@
+name: Installation problem
+description: Report a reproducible installation or discovery failure.
+title: "[Installation] "
+body:
+  - type: markdown
+    attributes:
+      value: "Public feedback only. Use synthetic/sanitised details; omit secrets, private paths, company content and participant records."
+  - type: input
+    id: package
+    attributes:
+      label: Package version
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Host/version, model if exposed, and operating system
+    validations:
+      required: true
+  - type: dropdown
+    id: method
+    attributes:
+      label: Installation method
+      options:
+        - Direct skill folder
+        - Codex plugin
+        - Claude plugin/marketplace
+        - Gemini extension
+        - Antigravity direct bundle
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Sanitised steps, expected behaviour and observed error
+      description: "Use project-relative or invented paths. No workspace backups."
+    validations:
+      required: true

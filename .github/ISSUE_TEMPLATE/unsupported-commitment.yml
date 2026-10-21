@@ -1,0 +1,29 @@
+name: Unsupported AI commitment
+description: Report an invented or contradicted business rule or misleading approval.
+title: "[Unsupported commitment] "
+body:
+  - type: markdown
+    attributes:
+      value: "Use a newly fictional minimal example. Do not upload confidential source documents, participant outputs or private study keys."
+  - type: input
+    id: environment
+    attributes:
+      label: Package version, host/version, model and affected mode
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Fictional supplied evidence and unsupported/contradicted statement
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected clarification, review or approval behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: What the skill actually did and how a human corrected it

@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.venv/
+dist/
+ba-mate-workspace/
+**/ba-mate-workspace/
+private/
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+.write.lock

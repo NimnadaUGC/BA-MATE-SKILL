@@ -1,0 +1,7 @@
+{
+  "name": "ba-mate-research",
+  "owner": {"name": "BA Mate research project"},
+  "plugins": [
+    {"name": "ba-mate", "source": "./", "description": "Portable human-governed BA framework workflow."}
+  ]
+}

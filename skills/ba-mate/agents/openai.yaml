@@ -1,0 +1,4 @@
+interface:
+  display_name: "BA Mate"
+  short_description: "Evidence-grounded, human-governed BA workflow"
+  default_prompt: "Use $ba-mate to review this brief and identify the next BA decisions."

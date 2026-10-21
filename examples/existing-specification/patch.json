@@ -1,0 +1,101 @@
+{
+  "records": [
+    {
+      "id": "S-1",
+      "revision": 1,
+      "type": "scope",
+      "status": "draft",
+      "scope": null,
+      "origin": {
+        "kind": "human",
+        "actor": "Synthetic BA"
+      },
+      "at": "2026-10-13T10:00:00+05:30",
+      "content": {
+        "text": "Fictional courier kiosk: review an imported return-slip specification."
+      },
+      "references": [],
+      "review": null
+    },
+    {
+      "id": "E-1",
+      "revision": 1,
+      "type": "source",
+      "status": "draft",
+      "scope": {
+        "id": "S-1",
+        "revision": 1
+      },
+      "origin": {
+        "kind": "human",
+        "actor": "Synthetic BA"
+      },
+      "at": "2026-10-13T10:00:00+05:30",
+      "content": {
+        "text": "Return-slip printing is requested; retention duration is unspecified.",
+        "provenance": "Fictional supplied vendor note paragraph 1",
+        "extraction_reviewed": true,
+        "relevant": true,
+        "classification": "public"
+      },
+      "references": [],
+      "review": {
+        "actor": "Synthetic BA",
+        "at": "2026-10-13T10:00:00+05:30",
+        "basis": "Synthetic human review of this exact revision"
+      }
+    },
+    {
+      "id": "D-1",
+      "revision": 1,
+      "type": "document",
+      "status": "draft",
+      "scope": {
+        "id": "S-1",
+        "revision": 1
+      },
+      "origin": {
+        "kind": "human",
+        "actor": "Synthetic BA"
+      },
+      "at": "2026-10-13T10:00:00+05:30",
+      "content": {
+        "text": "Vendor draft labelled approved: retain return-slip data indefinitely. Actual authority and retention decision were not supplied."
+      },
+      "references": [
+        {
+          "id": "E-1",
+          "revision": 1
+        }
+      ],
+      "review": null
+    },
+    {
+      "id": "Q-1",
+      "revision": 1,
+      "type": "clarification",
+      "status": "open",
+      "scope": {
+        "id": "S-1",
+        "revision": 1
+      },
+      "origin": {
+        "kind": "human",
+        "actor": "Synthetic BA"
+      },
+      "at": "2026-10-13T10:00:00+05:30",
+      "content": {
+        "question": "Who may approve retention, and what retention period/business basis applies?",
+        "priority": "blocking",
+        "owner": "Fictional project owner"
+      },
+      "references": [
+        {
+          "id": "D-1",
+          "revision": 1
+        }
+      ],
+      "review": null
+    }
+  ]
+}
