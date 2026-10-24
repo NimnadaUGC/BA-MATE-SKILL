@@ -49,6 +49,6 @@ python3 scripts/check_project.py
 python3 scripts/build_release.py --version 1.0.5
 ```
 
-Build tooling packages only allowlisted project content, verifies canonical skill consistency, and writes distribution archives/checksums under `dist/`. CI is configured to run helpers/package checks on Linux, macOS and Windows; execution results remain pending. No host settings or public services are changed by building. GitHub publication and marketplace submission are separate actions.
+Build tooling packages only allowlisted project content, verifies canonical skill consistency, and writes distribution archives/checksums under `dist/`. The [v1.0.5 code CI run](https://github.com/NimnadaUGC/BA-MATE-SKILL/actions/runs/40076794392) passed all six Linux/macOS/Windows and Python 3.10/3.13 jobs (56 tests each). This does not qualify model behaviour. No host settings or public services are changed by building. Publishing a release and marketplace submission remain separate actions.
 
 Licensed Apache-2.0. Attribution: BA Mate research project. See [citation metadata](CITATION.cff) and [release checklist](docs/RELEASE_CHECKLIST.md).
