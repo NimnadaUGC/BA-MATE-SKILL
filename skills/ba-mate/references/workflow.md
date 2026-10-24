@@ -12,7 +12,7 @@ Input: scoped documents, interviews, messages or existing artifacts. Register so
 
 ## Clarify
 
-Input: gaps, contradictions, missing criteria and unresolved assumptions. Questions include rationale, priority (blocking/important/optional), responsible human and affected record references. Ask the smallest useful batch; use choices only when they do not bias the answer or conceal uncertainty. Record the question even if another stakeholder must answer later. Actual answers include respondent and authority basis. Retain conflicting versions/answers and a reasoned authorised resolution; recency alone does not settle conflicting authorities. Simulated answers are illustrations with draft status. Defer nonblocking work with an owner/rationale; a deferred blocker still prevents affected approval.
+Input: gaps, contradictions, missing criteria and unresolved assumptions. Questions include rationale, priority (blocking/important/optional), responsible human and affected record references. Ask the smallest useful batch; use choices only when they do not bias the answer or conceal uncertainty. For a missing quantitative decision, ask for the value, unit and triggering event without offering invented numerical examples or default values. Record the question even if another stakeholder must answer later. Actual answers include respondent and authority basis. Retain conflicting versions/answers and a reasoned authorised resolution; recency alone does not settle conflicting authorities. Simulated answers are illustrations with draft status. Defer nonblocking work with an owner/rationale; a deferred blocker still prevents affected approval.
 
 ## Draft
 

@@ -1,6 +1,6 @@
 {
   "kind": "blank installed-host qualification record",
-  "package_version": "1.0.0",
+  "package_version": "1.0.5",
   "framework_version": "F4-draft.1",
   "record_schema": 1,
   "host": null,
@@ -9,10 +9,15 @@
   "processing_location": null,
   "available_tools": [],
   "case_id": null,
+  "task": null,
+  "prompt": null,
+  "attempt": null,
+  "canonical_skill_sha256": null,
   "started_at": null,
   "outcome": "not-run",
   "observations": null,
   "assistance": null,
+  "failure": null,
   "critical_failure": null,
   "private_evidence_reference": null,
   "repair_and_repeat_reference": null

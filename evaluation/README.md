@@ -6,4 +6,6 @@ For each host/version/model: install into an isolated synthetic project, confirm
 
 The evaluator supplies labelled fictional human answers/approval only when the case calls for them. They are not real stakeholder decisions. On failure, preserve the first attempt, repair a narrow cause, rerun that challenge and its affected journey, and record old/new versions. A critical known failure prevents runtime-supported claims for that host. Report missing runs honestly.
 
-Synthetic rehearsals can be repeated without credentials using `python3 scripts/rehearse.py`. Live host calls may depend on user access; no new paid credentials/models or telemetry are created by this repository.
+From a source checkout (not a host-only bundle), synthetic rehearsals can be repeated without credentials using `python3 scripts/rehearse.py`. Live host calls may depend on user access; no new paid credentials/models or telemetry are created by this repository.
+
+For v1.0.5, use [the five smoke tasks](smoke-cases.json), [the actual result index](results/README.md) and [the host procedure](../docs/QUALIFICATION.md). Retain initial failed attempts separately from repairs and repeats.

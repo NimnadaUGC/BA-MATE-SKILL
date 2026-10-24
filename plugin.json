@@ -1,9 +1,16 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "ba-mate",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "Evidence-grounded, human-governed Business Analysis workflow with local records and optional integrity helpers.",
-  "author": {"name": "BA Mate research project"},
+  "author": {
+    "name": "BA Mate research project"
+  },
   "license": "Apache-2.0",
-  "keywords": ["business-analysis", "requirements", "human-in-the-loop", "research"]
+  "keywords": [
+    "business-analysis",
+    "requirements",
+    "human-in-the-loop",
+    "research"
+  ]
 }

@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.0.5 — 24 October 2026 — beta qualification
+
+- Added Cursor project/global direct installation and a fifth self-contained host bundle from the canonical skill; no Cursor marketplace import is claimed.
+- Added a project-local beta quickstart and five fictional smoke tasks with actual host/model/task/result/assistance/failure records.
+- Codex passed all five tasks before and after the targeted guidance repairs. Cursor initial behaviour and its reversed manual trace, Antigravity numeric-example failure and blocked repeats are preserved. Claude Code discovery succeeded; generation requires login and remains unverified by owner choice.
+- Clarify guidance now avoids invented numeric examples; manual ledgers explicitly use upstream-to-downstream supports/depends-on traces.
+- Withheld broad runtime support claims and distinguished actual observations from structural checks. Framework F4-draft.1 and schema 1 unchanged; old schema-1 package records remain readable.
+- CI-driven fixes exclude desktop metadata from packages/installs/fingerprints and read qualification JSON as UTF-8 across platforms; model observations are retained unchanged.
+- CI now packages the current VERSION and produces six archives including source; installation tests exercise all five advertised paths and existing-target refusal.
+
 ## 1.0.0 — local release preparation
 
 - Added canonical BA Mate skill, eleven modes, progressive references and manual fallback.

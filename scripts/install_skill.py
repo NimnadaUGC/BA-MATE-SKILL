@@ -7,6 +7,20 @@ import shutil
 import sys
 import tempfile
 
+HOST_FOLDERS = {'codex': '.agents/skills', 'claude': '.claude/skills',
+                'gemini': '.gemini/skills', 'antigravity': '.agents/skills',
+                'cursor': '.cursor/skills'}
+
+
+def destination_for(host, scope, project=None, user_home=None):
+    if host not in HOST_FOLDERS or scope not in {'workspace', 'user'}:
+        raise ValueError('Unknown host or scope')
+    if scope == 'workspace' and project is None:
+        raise ValueError('--project is required for a workspace installation')
+    base = Path(project).absolute() if scope == 'workspace' else (Path(user_home) if user_home is not None else Path.home())
+    folder = '.gemini/config/skills' if host == 'antigravity' and scope == 'user' else HOST_FOLDERS[host]
+    return base / folder / 'ba-mate'
+
 
 def install(source, destination):
     if destination.exists() or destination.is_symlink():
@@ -25,7 +39,7 @@ def install(source, destination):
             raise ValueError('Another BA Mate installation is active or its lock requires examination') from exc
         try:
             os.close(fd)
-            shutil.copytree(source, temporary / 'ba-mate', ignore=shutil.ignore_patterns('__pycache__', '*.pyc'))
+            shutil.copytree(source, temporary / 'ba-mate', ignore=shutil.ignore_patterns('__pycache__', '*.pyc', '.DS_Store', 'Thumbs.db', 'desktop.ini'))
             if destination.exists() or destination.is_symlink():
                 raise ValueError('Installation appeared during copy; nothing overwritten')
             # Rename on the same volume; no settings files are touched.
@@ -39,18 +53,15 @@ def install(source, destination):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--host', choices=['codex', 'claude', 'gemini', 'antigravity'], required=True)
+    parser.add_argument('--host', choices=list(HOST_FOLDERS), required=True)
     parser.add_argument('--scope', choices=['workspace', 'user'], default='workspace')
     parser.add_argument('--project', type=Path)
     parser.add_argument('--source', type=Path, default=Path(__file__).resolve().parents[1] / 'skills' / 'ba-mate')
     args = parser.parse_args()
     if args.scope == 'workspace' and args.project is None:
         parser.error('--project is required for a workspace installation')
-    base = args.project.absolute() if args.scope == 'workspace' else Path.home()
-    folders = {'codex': '.agents/skills', 'claude': '.claude/skills', 'gemini': '.gemini/skills',
-               'antigravity': '.agents/skills' if args.scope == 'workspace' else '.gemini/config/skills'}
     try:
-        target = install(args.source, base / folders[args.host] / 'ba-mate')
+        target = install(args.source, destination_for(args.host, args.scope, args.project))
         print('Installed only the BA Mate skill at ' + str(target))
         return 0
     except (OSError, ValueError) as exc:

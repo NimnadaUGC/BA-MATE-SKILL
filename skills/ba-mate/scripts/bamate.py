@@ -19,7 +19,7 @@ from datetime import datetime, timezone
 from contextlib import contextmanager
 import uuid
 
-PACKAGE_VERSION = '1.0.0'
+PACKAGE_VERSION = '1.0.5'
 FRAMEWORK_VERSION = 'F4-draft.1'
 SCHEMA_VERSION = 1
 TYPES = {'scope', 'stakeholder', 'authority', 'source', 'context', 'clarification',

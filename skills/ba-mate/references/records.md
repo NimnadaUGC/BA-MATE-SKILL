@@ -4,7 +4,7 @@ Authoritative workspace: `ba-mate-workspace/state.json`. Use the helper `apply` 
 
 ## Workspace
 
-Fields: `schema_version` (1), `package_version` (1.0.0), `framework_version` (F4-draft.1), `workspace_revision` (starts at 1), and arrays `records`, `traces`, `pending_reviews`, `baselines`, `checkpoints`, `events`. Each mutation increments `workspace_revision` once. Do not use this number as an artifact revision. No application database, account, telemetry or native BA Mate ZIP import is implied.
+Fields: `schema_version` (1), `package_version` (1.0.5), `framework_version` (F4-draft.1), `workspace_revision` (starts at 1), and arrays `records`, `traces`, `pending_reviews`, `baselines`, `checkpoints`, `events`. Each mutation increments `workspace_revision` once. Do not use this number as an artifact revision. No application database, account, telemetry or native BA Mate ZIP import is implied.
 
 ## Record
 
