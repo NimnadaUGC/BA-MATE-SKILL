@@ -1,4 +1,6 @@
-# Implementation and qualification audit
+# Historical v1.0.0 implementation and qualification audit
+
+For the v1.0.5 beta update, current host evidence and failures are in [COMPATIBILITY.md](COMPATIBILITY.md), [QUALIFICATION.md](QUALIFICATION.md) and [results](../evaluation/results/README.md). The following is retained as the original release audit.
 
 Recorded 13 October 2026 against the approved v1.0.0 project plan. The local standalone implementation is delivered. Installed-host behaviour, practitioner pilots and cross-platform CI execution are pending; the project owner explicitly requested that unavailable results remain marked pending. Preparing the final archives does not grant a runtime-supported or research-validated label.
 

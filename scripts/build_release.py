@@ -12,15 +12,15 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 SKILL = ROOT / 'skills' / 'ba-mate'
-HOSTS = ('codex', 'claude', 'gemini', 'antigravity')
+HOSTS = ('codex', 'claude', 'gemini', 'antigravity', 'cursor')
 SOURCE_DIRS = {'skills', 'scripts', 'tests', 'docs', 'examples', 'evaluation', '.github', '.claude-plugin', 'commands'}
 SOURCE_FILES = {'README.md', 'LICENSE', 'NOTICE', 'CITATION.cff', 'CHANGELOG.md', 'CONTRIBUTING.md',
-                'VERSION', '.gitignore', 'plugin.json', 'gemini-extension.json'}
+                'VERSION', '.gitignore', '.gitattributes', 'plugin.json', 'gemini-extension.json'}
 SAFE_ROOT = SOURCE_DIRS | SOURCE_FILES
 
 
 def files(root):
-    for p in sorted(root.rglob('*')):
+    for p in sorted(root.rglob('*'), key=lambda item: item.relative_to(root).as_posix()):
         if {'ba-mate-workspace', '.git', '__pycache__', 'private', '.venv'} & set(p.relative_to(root).parts):
             continue
         if p.name == 'state.json' or p.name.startswith('.env') or p.suffix in {'.key', '.pem', '.pyc', '.pyo'}:
@@ -54,7 +54,7 @@ def bundle(host, version, stage):
         shutil.copy2(ROOT / name, target / name)
     # Include complete installation guidance and local installer for every host.
     (target / 'docs').mkdir()
-    for name in ('INSTALLATION.md', 'COMPATIBILITY.md'):
+    for name in ('INSTALLATION.md', 'COMPATIBILITY.md', 'BETA_QUICKSTART.md', 'QUALIFICATION.md'):
         shutil.copy2(ROOT / 'docs' / name, target / 'docs' / name)
     (target / 'scripts').mkdir()
     shutil.copy2(ROOT / 'scripts' / 'install_skill.py', target / 'scripts' / 'install_skill.py')
@@ -73,8 +73,10 @@ def bundle(host, version, stage):
         manifest['version'] = version
         write_json(target / 'gemini-extension.json', manifest)
         shutil.copytree(ROOT / 'commands', target / 'commands')
+    copy_public(ROOT / 'evaluation', target / 'evaluation')
     write_json(target / 'release.json', {'distribution_version': version, 'canonical_skill_version': (ROOT / 'VERSION').read_text().strip(),
-               'framework_version': 'F4-draft.1', 'record_schema': 1, 'host': host, 'qualification': 'structurally checked; live-host runtime pending'})
+               'framework_version': 'F4-draft.1', 'record_schema': 1, 'host': host,
+               'qualification': 'Beta; see docs/COMPATIBILITY.md and evaluation/results for observed scope and failures'})
     verify_core(target)
     return target
 

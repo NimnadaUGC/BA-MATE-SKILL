@@ -6,7 +6,7 @@
 - M1–M7 instruction/record/helper/challenge mapping is present.
 - Helper integrity, change, approval/export and recovery tests pass.
 - Three public fictional journeys run without the BA Mate application or parent research directory.
-- Four bundles include byte-identical canonical skill resources and working helper paths.
+- Five bundles include byte-identical canonical skill resources and working helper paths.
 - Archives are allowlisted; no secrets/private workspaces/study packets/keys/participant records.
 - Candidate and final archives include checksums, versions, license and notices.
 - Changes/failures and actual verification scope are recorded in VERIFICATION.md.
@@ -20,4 +20,12 @@
 - Confirm actual GitHub identity/URL before adding remote metadata; publication and marketplace submission are separate actions.
 - Do not describe package creation as empirical validation or a completed participant pilot.
 
-Local v1.0.0 preparation may be completed while these circulation/host items remain pending, provided the archives and documentation state those limits. Do not attach a live-host-qualified or research-validated label until corresponding evidence exists.
+Local v1.0.5 beta preparation may be completed while these circulation/host items remain pending, provided the archives and documentation state those limits. Do not attach a live-host-qualified or research-validated label until corresponding evidence exists.
+
+## v1.0.5 beta specifics
+
+- Cursor direct install uses `.cursor/skills/ba-mate` and refuses overwrites.
+- Five host archives plus source are self-contained; beta/qualification guidance and sanitised result records travel with each bundle.
+- Preserve initial failures and blocked repeat attempts; do not upgrade a claim merely because guidance was edited.
+- Update all package versions together; keep F4-draft.1 and record schema 1 unchanged.
+- Broad runtime support remains withheld until the full applicable host qualification passes.

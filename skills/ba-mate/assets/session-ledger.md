@@ -1,6 +1,6 @@
 # BA Mate session ledger — manual fallback
 
-Package: 1.0.0 · framework: F4-draft.1 · record schema: 1
+Package: 1.0.5 · framework: F4-draft.1 · record schema: 1
 
 Persistence status: manual ledger; automated integrity checks have not run. Save this ledger locally and supply it when resuming. Blank entries mean unknown, not confirmed. Do not put private ledgers in the skill repository.
 
@@ -27,6 +27,8 @@ Reviewed passages/provenance; extraction/relevance status; included, omitted and
 Original response and input manifest; edited response separately; selected/rejected items; human adoption/rationale; resulting draft refs. Preserve rejected/failed output rather than rewriting it as a corrected original.
 
 ## Trace review
+
+Use the same direction as the JSON contract: upstream evidence/input → downstream artifact. For example, a source supports a requirement, and a requirement supports its criterion. A requirement's citation list points back to evidence; that is not the direction of a `supports` trace. Use only `supports` or `depends-on` for the relationship.
 
 | Trace ID/revision | From ID/revision | To ID/revision | Relationship | Proposed/verified/stale | Human semantic verifier/time/basis |
 |---|---|---|---|---|---|

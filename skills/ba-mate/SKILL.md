@@ -5,7 +5,7 @@ description: "Support Business Analysis from stakeholder evidence through clarif
 
 # BA Mate
 
-Apply the evidence-grounded, human-governed BA framework **F4-draft.1**. Package 1.0.0; record schema 1. Effectiveness is a research question, not an established benefit.
+Apply the evidence-grounded, human-governed BA framework **F4-draft.1**. Package 1.0.5; record schema 1. Effectiveness is a research question, not an established benefit.
 
 ## Begin or resume
 

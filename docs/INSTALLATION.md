@@ -2,7 +2,9 @@
 
 Install into a chosen project first. The canonical source is `skills/ba-mate`; copy the whole folder, including references/assets/scripts. Do not install a lone SKILL.md or flatten nested resources. Existing installations must be preserved/reconciled before replacement. The installer copies only this skill and refuses overwrites; it does not change settings.
 
-## Direct installation (all four hosts)
+For a first fictional test, use [the beta quickstart](BETA_QUICKSTART.md). Exact observed qualification and failures are in [COMPATIBILITY.md](COMPATIBILITY.md).
+
+## Direct installation (all five hosts)
 
 From an extracted source or host distribution root:
 
@@ -10,7 +12,7 @@ From an extracted source or host distribution root:
 python3 scripts/install_skill.py --host codex --scope workspace --project /path/to/your/project
 ```
 
-Choose host `codex`, `claude`, `gemini` or `antigravity`. For a global install use `--scope user` instead; inspect the target below. On Windows use `py -3` and a Windows path. Without Python copy the folder manually to a target that does not already exist. No model/key installation is needed.
+Choose host `codex`, `claude`, `gemini`, `antigravity` or `cursor`. For a global install use `--scope user` instead; inspect the target below. On Windows use `py -3` and a Windows path. Without Python copy the folder manually to a target that does not already exist. No model/key installation is needed; actual host generation requires the host's normal account/model access.
 
 | Host | Workspace folder | User folder | Invocation |
 |---|---|---|---|
@@ -18,12 +20,19 @@ Choose host `codex`, `claude`, `gemini` or `antigravity`. For a global install u
 | Claude Code | `.claude/skills/ba-mate` | `~/.claude/skills/ba-mate` | `/ba-mate clarify this brief` for direct skill; plugin invocation is namespaced. |
 | Gemini CLI | `.gemini/skills/ba-mate` | `~/.gemini/skills/ba-mate` | Ask to use ba-mate; `/skills list` and `/skills reload` inspect discovery. Workspace trust/activation consent applies. |
 | Antigravity IDE / 2.0 | `.agents/skills/ba-mate` | `~/.gemini/config/skills/ba-mate` | Ask to use ba-mate; 2.0 documents `/ba-mate`. Inspect active skills in the IDE Customizations panel. |
+| Cursor | `.cursor/skills/ba-mate` | `~/.cursor/skills/ba-mate` | `/ba-mate`, attach with `@`, or ask to use BA Mate. Natural selection must be observed on the installed version. |
 
 Codex and Antigravity share the workspace `.agents/skills` convention: one installation there can serve both; do not attempt to overwrite it for the second host. Antigravity IDE also documents the legacy `~/.gemini/antigravity/skills` path. CLI global paths differ; use its documented workspace path for this direct bundle.
 
 Examples: `Use BA Mate to clarify this business brief`; `Use BA Mate to review an existing specification and identify unsupported commitments`; `Use BA Mate to assess this change against baseline BL-…`. A mode name is an argument, not a promise that eleven native slash commands exist.
 
-Official locations/invocation: [ChatGPT/Codex skills](https://learn.chatgpt.com/docs/build-skills), [Claude skills](https://code.claude.com/docs/en/skills), [Gemini skills](https://geminicli.com/docs/cli/skills/), [Antigravity skills](https://antigravity.google/docs/skills?tab=ide). Availability varies by host/version/account; consult the compatibility record instead of treating documentation as a runtime pass.
+Official locations/invocation (checked 24 October 2026): [ChatGPT/Codex skills](https://learn.chatgpt.com/docs/build-skills), [Claude skills](https://code.claude.com/docs/en/skills), [Gemini skills](https://geminicli.com/docs/cli/skills/), [Antigravity skills](https://antigravity.google/docs/skills?tab=ide), [Cursor skills](https://cursor.com/help/customization/skills). Availability varies by host/version/account; consult the compatibility record instead of treating documentation as a runtime pass.
+
+## Cursor direct bundle
+
+Extract `ba-mate-cursor-1.0.5.zip`. From its root run `python3 scripts/install_skill.py --host cursor --project /path/to/project`. The archive contains the identical canonical skill under `skills/ba-mate`; the installer places it in `.cursor/skills/ba-mate` in the chosen project. Open that project in Cursor and start a fresh chat. Do not install duplicate copies under both `.cursor/skills` and `.agents/skills`.
+
+This is a direct skill bundle, not a Cursor marketplace plugin. Cursor's From GitHub Repository plugin import requires its marketplace metadata; use this local-folder beta route for this repository. The ordinary repo download alone does not install the skill. Project-local installation does not enable personal skill sync, change permissions or send project records anywhere. Cloud/remote workers and their project context need separate qualification; no local smoke result qualifies them. See [Cursor's full reference](https://cursor.com/docs/skills).
 
 ## Codex portable plugin
 
