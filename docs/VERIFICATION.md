@@ -2,7 +2,7 @@
 
 ## Current implementation checks
 
-- macOS / Python 3.13.2: **55 helper/package/evidence tests passed**. Cursor project/global destination selection, isolated CLI installation for all five targets, existing-install refusal, no unrelated settings changes and v1.0.0 schema-1 record compatibility are covered.
+- macOS / Python 3.13.2: **56 helper/package/evidence tests passed**. Cursor project/global destination selection, isolated CLI installation for all five targets, existing-install refusal, no unrelated settings changes and v1.0.0 schema-1 record compatibility are covered.
 - Five host bundles plus source build from the same canonical skill. Installed links and package-wide Markdown resource links resolve; each bundled helper runs without the research parent directory. Runtime result records pin the tested public skill fingerprint to prevent silently inheriting stale qualification after future edits.
 - All three fictional helper journeys pass after the update. These deterministic rehearsals remain separate from actual host/model tests.
 - Bundled skill-creator validator passed. Its optional PyYAML validator dependency was supplied temporarily; installed helpers and installer remain standard-library only.
@@ -16,7 +16,7 @@ Broad runtime support, the complete installed-host B01–B15 suite, full host jo
 
 ## Cross-platform CI and distributions
 
-CI now reads VERSION instead of a fixed 1.0.0 release label, checks Linux/macOS/Windows with Python 3.10/3.13 and retains ZIPs plus checksums. Current branch execution will be recorded after push. The original 1.0.0 commit already passed the configured workflow; this does not qualify the updated code by itself.
+CI now reads VERSION instead of a fixed 1.0.0 release label, checks Linux/macOS/Windows with Python 3.10/3.13 and retains ZIPs plus checksums. The first v1.0.5 CI run [40076507444](https://github.com/NimnadaUGC/BA-MATE-SKILL/actions/runs/40076507444) caught desktop metadata included in the initial fingerprint and a Windows default-encoding read in the new evidence test. Public packaging/installation now excludes Finder/Windows desktop metadata; fingerprints were recomputed from retained public installed files, and evidence JSON reads explicitly use UTF-8. The repaired matrix run is recorded below after completion. The original 1.0.0 commit already passed the configured workflow; this does not qualify the updated code by itself.
 
 Local v1.0.5 source and five host archives contain beta guidance, compatibility limits and actual result records. Package 1.0.5 does not change F4-draft.1 or schema 1. No public release tag, marketplace submission, participant study or main-branch merge is implied.
 

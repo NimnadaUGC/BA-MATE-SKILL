@@ -88,6 +88,8 @@ class PackageTests(unittest.TestCase):
             (source / 'guide.md').write_text('Public guide')
             (source / 'state.json').write_text('Private synthetic state marker')
             (source / '.env.local').write_text('Private synthetic env marker')
+            for name in ('.DS_Store', 'Thumbs.db', 'desktop.ini'):
+                (source / name).write_bytes(b'Fictional desktop metadata')
             (source / 'private').mkdir()
             (source / 'private' / 'notes.md').write_text('Private synthetic notes marker')
             destination = Path(tmp) / 'public'
@@ -142,7 +144,7 @@ class PackageTests(unittest.TestCase):
         skill = ROOT / 'skills/ba-mate'
         for resource in builder.files(skill):
             digest.update(resource.relative_to(skill).as_posix().encode() + b'\0' + resource.read_bytes())
-        records = {host: json.loads((ROOT / f'evaluation/results/{host}-v1.0.5.json').read_text())
+        records = {host: json.loads((ROOT / f'evaluation/results/{host}-v1.0.5.json').read_text(encoding='utf-8'))
                    for host in ('codex', 'cursor', 'claude', 'antigravity')}
         # Prevent a future edit from quietly inheriting final-core runtime claims.
         final_codex = [c for c in records['codex']['cases'] if c['attempt'] == 2]
@@ -159,6 +161,17 @@ class PackageTests(unittest.TestCase):
         self.assertTrue(any(c['result'] == 'failed' for c in records['cursor']['cases']))
         self.assertTrue(any(c['result'] == 'failed' for c in records['antigravity']['cases']))
         self.assertFalse(any(c['result'] == 'passed' for c in records['claude']['cases']))
+
+    def test_installer_excludes_desktop_metadata(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            source = Path(tmp) / 'skill'
+            source.mkdir()
+            (source / 'SKILL.md').write_text('Fictional skill')
+            for name in ('.DS_Store', 'Thumbs.db', 'desktop.ini'):
+                (source / name).write_bytes(b'Fictional desktop metadata')
+            target = Path(tmp) / 'installed'
+            installer.install(source, target)
+            self.assertEqual({p.name for p in target.iterdir()}, {'SKILL.md'})
 
 
 if __name__ == '__main__':

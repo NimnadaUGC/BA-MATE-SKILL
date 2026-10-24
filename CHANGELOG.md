@@ -7,6 +7,7 @@
 - Codex passed all five tasks before and after the targeted guidance repairs. Cursor initial behaviour and its reversed manual trace, Antigravity numeric-example failure and blocked repeats are preserved. Claude Code discovery succeeded; generation requires login and remains unverified by owner choice.
 - Clarify guidance now avoids invented numeric examples; manual ledgers explicitly use upstream-to-downstream supports/depends-on traces.
 - Withheld broad runtime support claims and distinguished actual observations from structural checks. Framework F4-draft.1 and schema 1 unchanged; old schema-1 package records remain readable.
+- CI-driven fixes exclude desktop metadata from packages/installs/fingerprints and read qualification JSON as UTF-8 across platforms; model observations are retained unchanged.
 - CI now packages the current VERSION and produces six archives including source; installation tests exercise all five advertised paths and existing-target refusal.
 
 ## 1.0.0 — local release preparation

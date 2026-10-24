@@ -23,7 +23,7 @@ def files(root):
     for p in sorted(root.rglob('*'), key=lambda item: item.relative_to(root).as_posix()):
         if {'ba-mate-workspace', '.git', '__pycache__', 'private', '.venv'} & set(p.relative_to(root).parts):
             continue
-        if p.name == 'state.json' or p.name.startswith('.env') or p.suffix in {'.key', '.pem', '.pyc', '.pyo'}:
+        if p.name in {'state.json', '.DS_Store', 'Thumbs.db', 'desktop.ini'} or p.name.startswith('.env') or p.suffix in {'.key', '.pem', '.pyc', '.pyo'}:
             continue
         if p.is_symlink():
             raise ValueError('Symlinked resources cannot enter release archives')

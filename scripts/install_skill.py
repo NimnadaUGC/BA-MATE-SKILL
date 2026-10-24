@@ -39,7 +39,7 @@ def install(source, destination):
             raise ValueError('Another BA Mate installation is active or its lock requires examination') from exc
         try:
             os.close(fd)
-            shutil.copytree(source, temporary / 'ba-mate', ignore=shutil.ignore_patterns('__pycache__', '*.pyc'))
+            shutil.copytree(source, temporary / 'ba-mate', ignore=shutil.ignore_patterns('__pycache__', '*.pyc', '.DS_Store', 'Thumbs.db', 'desktop.ini'))
             if destination.exists() or destination.is_symlink():
                 raise ValueError('Installation appeared during copy; nothing overwritten')
             # Rename on the same volume; no settings files are touched.
