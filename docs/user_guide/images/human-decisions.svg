@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="730" viewBox="0 0 1200 730" role="img" aria-labelledby="title desc">
+  <title id="title">Adoption, evidence verification and approval are different decisions</title>
+  <desc id="desc">Adopting selected proposals makes a working draft. Human verification checks whether actual evidence supports a specific claim. An authorised human approval covers an exact selection of revisions and can create a retained baseline. Changed inputs trigger impact review and revised drafts, preserving the old baseline.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#526778"/></marker>
+    <style>text{font-family:Arial,Helvetica,sans-serif;fill:#163447}.title{font-size:34px;font-weight:700}.sub{font-size:20px;fill:#4d6473}.label{font-size:17px;font-weight:700;letter-spacing:1px}.head{font-size:27px;font-weight:700}.body{font-size:20px}.small{font-size:18px;fill:#4d6473}.line{fill:none;stroke:#526778;stroke-width:2.5;marker-end:url(#arrow)}</style>
+  </defs>
+  <rect width="1200" height="730" rx="24" fill="#f3f7fa"/>
+  <rect width="1200" height="10" rx="5" fill="#087f8c"/>
+  <text x="44" y="63" class="label">BA MATE · HUMAN DECISIONS</text>
+  <text x="44" y="112" class="title">“Keep this draft” does not mean “approve it.”</text>
+  <text x="44" y="151" class="sub">Different decisions, recorded separately. People may revisit each one as work evolves.</text>
+  <rect x="44" y="189" width="350" height="303" rx="18" fill="#fff" stroke="#b4cbd7"/>
+  <rect x="425" y="189" width="350" height="303" rx="18" fill="#fff" stroke="#b4cbd7"/>
+  <rect x="806" y="189" width="350" height="303" rx="18" fill="#fff" stroke="#b4cbd7"/>
+  <rect x="44" y="189" width="350" height="8" rx="4" fill="#5579a9"/>
+  <rect x="425" y="189" width="350" height="8" rx="4" fill="#a86a20"/>
+  <rect x="806" y="189" width="350" height="8" rx="4" fill="#087f8c"/>
+  <text x="68" y="236" class="label">HUMAN SELECTION</text>
+  <text x="68" y="280" class="head">Adopt</text>
+  <text x="68" y="324" class="body">“Use this proposal,</text><text x="68" y="354" class="body">with these edits.”</text>
+  <text x="68" y="402" class="small">Keep the original and decisions.</text>
+  <rect x="68" y="429" width="302" height="40" rx="10" fill="#edf2f9"/>
+  <text x="219" y="456" text-anchor="middle" class="body">Outcome: working draft</text>
+  <text x="449" y="236" class="label">HUMAN EVIDENCE CHECK</text>
+  <text x="449" y="280" class="head">Verify</text>
+  <text x="449" y="324" class="body">“This passage supports</text><text x="449" y="354" class="body">this exact claim.”</text>
+  <text x="449" y="402" class="small">Read the meaning and context.</text>
+  <rect x="449" y="429" width="302" height="40" rx="10" fill="#fbf2e5"/>
+  <text x="600" y="456" text-anchor="middle" class="body">Outcome: checked support</text>
+  <text x="830" y="236" class="label">AUTHORISED HUMAN DECISION</text>
+  <text x="830" y="280" class="head">Approve</text>
+  <text x="830" y="324" class="body">“I approve these revisions</text><text x="830" y="354" class="body">within this stated scope.”</text>
+  <text x="830" y="402" class="small">Show exclusions and remaining issues.</text>
+  <rect x="830" y="429" width="302" height="40" rx="10" fill="#e3f3f1"/>
+  <text x="981" y="456" text-anchor="middle" class="body">Outcome: retained baseline</text>
+  <path d="M395 340H420" class="line"/>
+  <path d="M776 340H801" class="line"/>
+  <rect x="44" y="516" width="1112" height="65" rx="14" fill="#e6eff4"/>
+  <text x="66" y="544" class="body">AI proposes and helps review. People decide business meaning and approval scope.</text>
+  <text x="66" y="569" class="small">A valid citation, a successful helper check or a host tool permission is not business approval.</text>
+  <rect x="44" y="605" width="1112" height="95" rx="14" fill="#fff" stroke="#b4cbd7"/>
+  <text x="66" y="642" class="head">When an input changes</text>
+  <text x="66" y="677" class="body">Keep the old baseline → assess impacts → revise drafts → revalidate → seek new scoped approval.</text>
+</svg>

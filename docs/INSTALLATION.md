@@ -1,5 +1,7 @@
 # Installation and removal
 
+For a simple, user-oriented introduction, start with the [BA Mate User Guide](user_guide/README.md).
+
 Install into a chosen project first. The canonical source is `skills/ba-mate`; copy the whole folder, including references/assets/scripts. Do not install a lone SKILL.md or flatten nested resources. Existing installations must be preserved/reconciled before replacement. The installer copies only this skill and refuses overwrites; it does not change settings.
 
 For a first fictional test, use [the beta quickstart](BETA_QUICKSTART.md). Exact observed qualification and failures are in [COMPATIBILITY.md](COMPATIBILITY.md).

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="800" viewBox="0 0 1000 800" role="img" aria-labelledby="title desc">
+<title id="title">The iterative BA Mate workflow</title>
+<desc id="desc">Enter with a brief an existing specification or a change. Read evidence clarify questions propose artifacts and review them. Human approval covers selected revisions. Retain earlier baselines and review impacts after change.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#31556c"/></marker><style>text{font-family:Arial,Helvetica,sans-serif;fill:#173e5b}.h{font-size:30px;font-weight:bold}.b{font-size:24px}.s{font-size:22px}.line{fill:none;stroke:#31556c;stroke-width:3;marker-end:url(#arrow)}</style></defs>
+<rect width="1000" height="800" rx="22" fill="#f1f6f8"/>
+<text x="40" y="51" class="h">Choose an entry point</text>
+<text x="40" y="92" class="b">New brief · Existing specification · Proposed change</text>
+<path d="M500 110V141" class="line"/>
+<rect x="32" y="152" width="936" height="423" rx="20" fill="#e1edf2"/>
+<text x="54" y="192" class="s">Repeat the work that your current task needs</text>
+<rect x="54" y="218" width="426" height="143" rx="15" fill="#fff"/>
+<rect x="520" y="218" width="426" height="143" rx="15" fill="#fff"/>
+<rect x="54" y="402" width="426" height="143" rx="15" fill="#fff"/>
+<rect x="520" y="402" width="426" height="143" rx="15" fill="#fff"/>
+<text x="77" y="258" class="h">Evidence</text><text x="77" y="301" class="b">Read actual passages.</text><text x="77" y="334" class="b">Show gaps and reading limits.</text>
+<text x="543" y="258" class="h">Clarify</text><text x="543" y="301" class="b">Ask useful questions.</text><text x="543" y="334" class="b">Record actual human answers.</text>
+<text x="77" y="442" class="h">Propose</text><text x="77" y="485" class="b">Draft requirements and criteria.</text><text x="77" y="518" class="b">Explain actors and processes.</text>
+<text x="543" y="442" class="h">Review</text><text x="543" y="485" class="b">Check quality and meaning.</text><text x="543" y="518" class="b">Select, edit or reject proposals.</text>
+<path d="M480 290H516" class="line"/><path d="M733 363V382H267V398" class="line"/><path d="M480 473H516" class="line"/>
+<path d="M733 547V562H44V290H50" class="line"/>
+<path d="M500 576V605" class="line"/>
+<rect x="32" y="610" width="936" height="96" rx="16" fill="#087f8c"/>
+<text x="54" y="648" class="h" style="fill:white">Human approval of selected revisions</text>
+<text x="54" y="685" class="b" style="fill:white">Resolve affected blockers and state scope and exclusions.</text>
+<text x="40" y="750" class="b">Retain the baseline and export selected work.</text>
+<text x="40" y="784" class="s">If an input changes, assess impacts and review revised drafts.</text>
+</svg>

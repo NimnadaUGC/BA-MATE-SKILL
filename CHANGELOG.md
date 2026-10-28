@@ -2,6 +2,10 @@
 
 ## 1.0.5 — 24 October 2026 — beta qualification
 
+- Added a separate BA-oriented user guide with installation steps, all mode prompts, a fictional walkthrough, workflow/approval infographics, saving/recovery guidance and public feedback instructions; included it in every host distribution.
+- Replaced the long Word manual with three focused editable guides: Getting Started, Workflow and Prompts, and separate Testing and Feedback. Added plain-language mode selection, concise fictional examples, redesigned diagrams, compact logo covers, native headings and page numbering.
+- Refined the guides on 28 October 2026 with clearer explanations, labelled copy prompts, more table padding, rebalanced page breaks and separate rating and written-feedback pages. Added labelled editable answer controls and rating checkboxes with a print fallback.
+- Matched the BA Mate application font, Google Sans Flex; embedded regular/bold fonts and included their OFL licence and publishing sources. Excluded Office temporary lock files from public archives.
 - Added Cursor project/global direct installation and a fifth self-contained host bundle from the canonical skill; no Cursor marketplace import is claimed.
 - Added a project-local beta quickstart and five fictional smoke tasks with actual host/model/task/result/assistance/failure records.
 - Codex passed all five tasks before and after the targeted guidance repairs. Cursor initial behaviour and its reversed manual trace, Antigravity numeric-example failure and blocked repeats are preserved. Claude Code discovery succeeded; generation requires login and remains unverified by owner choice.

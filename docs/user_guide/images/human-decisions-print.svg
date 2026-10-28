@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="760" viewBox="0 0 1000 760" role="img" aria-labelledby="title desc">
+<title id="title">Three separate human decisions</title>
+<desc id="desc">Adoption creates a draft. Verification checks whether evidence supports an exact claim. An authorised human approval covers selected revisions and retains a baseline. Changed inputs need impact review and revalidation while the earlier baseline remains.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#173e5b}.h{font-size:32px;font-weight:bold}.b{font-size:25px}.s{font-size:23px}.tag{font-size:22px;font-weight:bold}</style>
+<rect width="1000" height="760" rx="22" fill="#f1f6f8"/>
+<text x="40" y="53" class="h">Three separate human decisions</text>
+<text x="40" y="95" class="b">A working draft does not carry baseline approval.</text>
+<rect x="32" y="128" width="936" height="145" rx="16" fill="#fff" stroke="#bdd0da"/>
+<text x="56" y="171" class="tag">SELECTION</text><text x="56" y="222" class="h">Adopt</text>
+<text x="300" y="170" class="b">Select or edit a proposal.</text><text x="300" y="211" class="b">Keep the original and the decision.</text><text x="300" y="250" class="tag">Result: Working draft</text>
+<rect x="32" y="295" width="936" height="145" rx="16" fill="#fff" stroke="#bdd0da"/>
+<text x="56" y="338" class="tag">EVIDENCE CHECK</text><text x="56" y="389" class="h">Verify</text>
+<text x="300" y="337" class="b">Read the actual source and its context.</text><text x="300" y="378" class="b">Check support for this exact claim.</text><text x="300" y="417" class="tag">Result: Support checked by a human</text>
+<rect x="32" y="462" width="936" height="145" rx="16" fill="#fff" stroke="#bdd0da"/>
+<text x="56" y="505" class="tag">AUTHORISED DECISION</text><text x="56" y="556" class="h">Approve</text>
+<text x="330" y="504" class="b">Approve identified revisions and scope.</text><text x="330" y="545" class="b">Retain content, issues and exclusions.</text><text x="330" y="584" class="tag">Result: Retained baseline</text>
+<text x="40" y="656" class="h">When an input changes</text>
+<text x="40" y="695" class="s">Keep the old baseline and assess impacts.</text>
+<text x="40" y="731" class="s">Revise drafts, revalidate affected work and seek scoped approval.</text>
+</svg>

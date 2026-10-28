@@ -88,7 +88,7 @@ class PackageTests(unittest.TestCase):
             (source / 'guide.md').write_text('Public guide')
             (source / 'state.json').write_text('Private synthetic state marker')
             (source / '.env.local').write_text('Private synthetic env marker')
-            for name in ('.DS_Store', 'Thumbs.db', 'desktop.ini'):
+            for name in ('.DS_Store', 'Thumbs.db', 'desktop.ini', '~$BA-Mate-Guide.docx'):
                 (source / name).write_bytes(b'Fictional desktop metadata')
             (source / 'private').mkdir()
             (source / 'private' / 'notes.md').write_text('Private synthetic notes marker')
@@ -167,7 +167,7 @@ class PackageTests(unittest.TestCase):
             source = Path(tmp) / 'skill'
             source.mkdir()
             (source / 'SKILL.md').write_text('Fictional skill')
-            for name in ('.DS_Store', 'Thumbs.db', 'desktop.ini'):
+            for name in ('.DS_Store', 'Thumbs.db', 'desktop.ini', '~$BA-Mate-Guide.docx'):
                 (source / name).write_bytes(b'Fictional desktop metadata')
             target = Path(tmp) / 'installed'
             installer.install(source, target)

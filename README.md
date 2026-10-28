@@ -10,6 +10,10 @@ Runtime evidence: Codex passed five smoke cases on the final core. Cursor has ac
 
 ## Start
 
+New to the workflow? Read the **[BA Mate User Guide](docs/user_guide/README.md)** for a simple installation path, mode prompts, illustrated human decisions and a complete fictional walkthrough.
+
+The editable Word set has three short documents: **[Getting Started](docs/user_guide/BA-Mate-01-Getting-Started-v1.0.5.docx)**, **[Workflow and Prompts](docs/user_guide/BA-Mate-02-Everyday-Workflow-v1.0.5.docx)** and optional **[Testing and Feedback](docs/user_guide/BA-Mate-03-Testing-and-Feedback-v1.0.5.docx)**. Begin with the four-page Getting Started guide; testing forms are kept separate from everyday BA work.
+
 1. Follow the [beta quickstart](docs/BETA_QUICKSTART.md) to install only this skill into a chosen fictional project. Full platform options are in [installation instructions](docs/INSTALLATION.md).
 2. Open your chosen BA project and invoke the skill, for example: **Use BA Mate to review this brief, identify missing business decisions and draft requirements after clarification.**
 3. Review actual evidence and answer/route questions. Select/edit/reject proposals. Adoption creates drafts; final approval is separate.

@@ -5,3 +5,8 @@ This package adapts the project's F4-draft.1 framework specification,
 research contribution and I2-draft.1 assessment/feedback instruments.
 The BA Mate application and this skills implementation are separate artifacts.
 All included demonstration cases are fictional, public practice material.
+
+Google Sans Flex font files in docs/user_guide/fonts are Copyright 2022
+The Google Sans Flex Project Authors and licensed under the SIL Open Font
+License 1.1, reproduced in that directory. They are also embedded in the
+Word guides. Their font licence is separate from the Apache-2.0 project licence.

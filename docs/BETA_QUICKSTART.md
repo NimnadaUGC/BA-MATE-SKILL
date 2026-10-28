@@ -1,5 +1,7 @@
 # Try BA Mate v1.0.5 beta
 
+Prefer a guided introduction? Open the [BA Mate User Guide](user_guide/README.md) for illustrated explanations, copyable prompts and a fictional BA journey.
+
 Use a new fictional project first. This is a beta implementation of F4-draft.1; host qualification is limited to the observations in [COMPATIBILITY.md](COMPATIBILITY.md). Installation does not establish research effectiveness.
 
 ## Install in a project

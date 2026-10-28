@@ -23,7 +23,7 @@ def files(root):
     for p in sorted(root.rglob('*'), key=lambda item: item.relative_to(root).as_posix()):
         if {'ba-mate-workspace', '.git', '__pycache__', 'private', '.venv'} & set(p.relative_to(root).parts):
             continue
-        if p.name in {'state.json', '.DS_Store', 'Thumbs.db', 'desktop.ini'} or p.name.startswith('.env') or p.suffix in {'.key', '.pem', '.pyc', '.pyo'}:
+        if p.name in {'state.json', '.DS_Store', 'Thumbs.db', 'desktop.ini'} or p.name.startswith(('.env', '~$')) or p.suffix in {'.key', '.pem', '.pyc', '.pyo'}:
             continue
         if p.is_symlink():
             raise ValueError('Symlinked resources cannot enter release archives')
@@ -56,9 +56,10 @@ def bundle(host, version, stage):
     (target / 'docs').mkdir()
     for name in ('INSTALLATION.md', 'COMPATIBILITY.md', 'BETA_QUICKSTART.md', 'QUALIFICATION.md'):
         shutil.copy2(ROOT / 'docs' / name, target / 'docs' / name)
+    copy_public(ROOT / 'docs' / 'user_guide', target / 'docs' / 'user_guide')
     (target / 'scripts').mkdir()
     shutil.copy2(ROOT / 'scripts' / 'install_skill.py', target / 'scripts' / 'install_skill.py')
-    (target / 'README.md').write_text(f'# BA Mate {host} distribution\n\nDistribution {version}; canonical skill { (ROOT / "VERSION").read_text().strip() }; framework F4-draft.1; schema 1.\n\nSee docs/INSTALLATION.md for this host. All runtime resources are inside skills/ba-mate. No MCP or provider connection is required. Host runtime qualification is recorded separately in docs/COMPATIBILITY.md.\n', encoding='utf-8')
+    (target / 'README.md').write_text(f'# BA Mate {host} distribution\n\nDistribution {version}; canonical skill { (ROOT / "VERSION").read_text().strip() }; framework F4-draft.1; schema 1.\n\nStart with the [BA Mate User Guide](docs/user_guide/README.md) for installation, mode prompts and a fictional walkthrough. See [installation options](docs/INSTALLATION.md) for this host. All runtime resources are inside skills/ba-mate. No MCP or provider connection is required. Host runtime qualification is recorded separately in [compatibility](docs/COMPATIBILITY.md).\n', encoding='utf-8')
     if host == 'codex':
         manifest = json.loads((ROOT / 'plugin.json').read_text())
         manifest['version'] = version

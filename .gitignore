@@ -12,3 +12,9 @@ private/
 *.key
 *.pem
 .write.lock
+
+# Office temporary owner and lock files
+~$*
+
+# Superseded long manual retained only in local backups
+docs/user_guide/BA-Mate-User-Guide-v1.0.5.docx
